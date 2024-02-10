@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Hotels_Booking.Models.Online_Booking>
+
+@{
+    ViewData["Title"] = "list";
+}
+<h1>list</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.H_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Add1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Add2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Mobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_DoB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Document)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C_Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ISActive)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+           <tr>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Name)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Id)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.H_Name)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Add1)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Add2)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Email)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Mobile)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_DoB)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Document)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.C_Gender)
+               </td>
+               <td>
+                    @Html.DisplayFor(modelItem => item.ISActive)
+               </td>
+               @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { C_Id=item.C_Id}) |
+                    @Html.ActionLink("Delete", "Delete", new { C_Id=item.C_Id  })
+               </td>*@
+           </tr>    
+        
+        }
+    </tbody>
+
+</table>
